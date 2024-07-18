@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Other dependencies remain unchanged
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.22.0'
+    testImplementation 'io.cucumber:cucumber-java:7.2.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.2.0'
+    testImplementation 'net.serenity-bdd:serenity-core:4.1.20'
+    testImplementation 'net.serenity-bdd:serenity-screenplay:4.1.20'
+    testImplementation 'net.serenity-bdd:serenity-screenplay-webdriver:4.1.20'
+    implementation 'org.apache.pdfbox:pdfbox:2.0.24'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.3'
+    implementation 'org.junit.platform:junit-platform-gradle-plugin:1.2.0'
+}
+
+test {
+    useJUnitPlatform()
+}
